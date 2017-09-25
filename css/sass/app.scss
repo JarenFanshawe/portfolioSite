@@ -1,0 +1,636 @@
+//SASS Document
+
+
+
+//Variables
+$brand-color: #32FFDB;
+$theme-dark: #202124;
+$theme-light: #FAFAFA;
+$line-break: #3D3C3B;
+$button-light: #C41E31;
+$button-dark: #7A131F;
+
+$bodyFont: Helvetica, Arial, sans-serif;
+$headerFont: Helvetica, Arial, sans-serif;
+
+
+//Mixin link
+@import "mixins.scss";
+
+
+//Frameworks
+.row {
+    max-width: 100%;
+}
+
+
+//Main Page Elements
+
+
+body {
+    background-color: #FAFAFA;
+    font-family: $bodyFont;
+
+    header {
+        background-color: $theme-dark;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        #logoCon {
+            padding-left: 22px;
+        }
+
+        img {
+            max-width: 100%;
+            margin-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        #mainNav {
+            margin-right: 0px;
+
+            ul {
+                text-align: center;
+                margin: 0px;
+
+                li:last-child {
+                    margin-right: 0px;
+                }
+
+                li {
+                    display: inline;
+                    margin-right: 50px;
+
+                    a {
+                        font-size: 1.625em;
+                        color: $theme-light;
+                    }
+
+                    a:hover {
+                        color: $brand-color;
+                        border-bottom: 1px solid $brand-color;
+                        transition: all .8s ease;
+                    }
+                }
+            }
+        }
+    }
+
+    #bannerCon {
+        margin-top: 60px;
+        margin-bottom: 200px;
+    }
+
+        #welcome {
+            padding-left: 20px;
+            padding-right: 20px;
+
+            h3 {
+                font-family: $headerFont;
+                color: $theme-dark;
+                font-weight: bold;
+                font-size: 3.5em;
+                text-align: center;
+                padding-left: 15%;
+                padding-right: 15%;
+            }
+        }
+
+        #scrollArrow {
+            margin-top: 20px;
+            width: 100%;
+            animation-name: pulse;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            display: block;
+            text-align: center;
+
+            img {
+                width: 80px;
+                margin-left: 0 auto;
+                margin-right: 0 auto;
+            }
+        }
+
+        @keyframes pulse {
+            0% {transform: scale(1); }
+            50% {transform: scale(0.85); }
+            100% {transform: scale(1); }
+        }
+
+    #aboutCon {
+        margin-top: 40px;
+        border-top: 1px solid $line-break;
+        padding-top: 40px;
+
+        h2 {
+            font-family: $headerFont;
+            color: $theme-dark;
+            font-weight: bold;
+            font-size: 4.688em;
+            text-align: center;
+        }
+
+        #aboutInfo {
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+
+        #contactButton {
+            text-align: center;
+        }
+    }
+
+    .button {
+        background-color: $button-light;
+        padding: 20px;
+        margin-left: 0 auto;
+        margin-right: 0 auto;
+        margin-top: 30px;
+        box-shadow: 6px 6px 8px #888888;
+
+        a {
+            color: $theme-light;
+            font-size: 2.3em;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+
+    .button:hover {
+        background-color: $button-dark;
+    }
+
+    #aboutImg {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        width: 100%;
+        display: block;
+        text-align: center;
+
+        img {
+            max-width: 200px;
+            border-radius: 200px;
+            margin-left: 0 auto;
+            margin-right: 0 auto;
+        }
+    }
+
+    #workCon {
+        margin-top: 40px;
+        border-top: 1px solid $line-break;
+        padding-top: 40px;
+
+        h2 {
+            font-family: $headerFont;
+            color: $theme-dark;
+            font-weight: bold;
+            font-size: 4.688em;
+            text-align: center;
+        }
+    }
+
+    .workBox {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        height: 350px;
+        width: 100%;
+        display: block;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .hoverText {
+        font-family: $bodyFont;
+        line-height: 350px;
+        text-align: center;
+        color: $theme-light;
+        font-weight: bold;
+        font-size: 2.25em;
+        opacity: 0;
+        transition: all .4s ease;
+        text-shadow: 3px 3px 8px #1d1d1d;
+    }
+
+    .hoverText:hover {
+        opacity: 1;
+    }
+
+    .workBox:hover {
+        -webkit-filter: grayscale(80%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(80%);
+    }
+
+    #workBoxes {
+        margin-bottom: 30px;
+        width: 100%;
+        display: block;
+
+        #westernBox {
+            background-image: url("../images/western.png");
+        }
+
+        #westernBox:hover {
+            background-image: url("../images/westernBlur.png");
+        }
+
+        #teamCanadaBox {
+            background-image: url("../images/teamCanada.png");
+        }
+
+        #teamCanadaBox:hover {
+            background-image: url("../images/teamCanadaBlur.png");
+        }
+
+        #fimsCouncilBox {
+            background-image: url("../images/fimsCouncil.png");
+        }
+
+        #fimsCouncilBox:hover {
+            background-image: url("../images/fimsCouncilBlur.png");
+        }
+
+        #jjvideographyBox {
+            background-image: url("../images/jjvideography.png");
+        }
+
+        #jjvideographyBox:hover {
+            background-image: url("../images/jjvideographyBlur.png");
+        }
+
+        #blankBox {
+            display: none;
+        }
+    }
+
+    #contactCon {
+        margin-top: 20px;
+        margin-bottom: 50px;
+        border-top: 1px solid $line-break;
+        padding-top: 20px;
+
+        h2 {
+            font-family: $headerFont;
+            color: $theme-dark;
+            font-weight: bold;
+            font-size: 4.688em;
+            text-align: center;
+        }
+
+        #linksCon {
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 40px;
+
+            h3 {
+                font-family: $headerFont;
+                font-size: 2em;
+                margin-bottom: 30px;
+                margin-top: 20px;
+                margin-left: 20px;
+                text-align: center;
+            }
+
+            ul {
+                list-style-type: none;
+                text-align: center;
+                margin: 0px;
+            }
+
+            li {
+                margin-bottom: 15px;
+            }
+
+            li:last-child {
+                margin-bottom: 0px;
+            }
+
+            img {
+                width: 30px;
+                margin-right: 5px;
+                padding-bottom: 5px;
+            }
+
+            a {
+                font-family: $bodyFont;
+                color: $theme-dark;
+                font-style: italic;
+                font-size: 1.5em;
+                transition: all .5s ease;
+            }
+
+            a:hover {
+                opacity: .6;
+            }
+        }
+
+        #mapCon {
+                height: 300px;
+                background-color: $theme-light;
+                margin-right: auto;
+                margin-left: auto;
+        }
+    }
+
+    footer {
+        background-color: $theme-dark;
+        margin-top: 20px;
+        color: $theme-light;
+
+        #backTop {
+            width: 100%;
+            height: 80px;
+            padding-top: 10px;
+            text-align: center;
+
+            a {
+                color: $theme-light;
+                font-size: .85em;
+                transition: all .8s ease;
+            }
+
+            a:hover {
+                opacity: .7;
+            }
+
+            img {
+                width: 25px;
+                margin-right: 10px;
+            }
+        }
+
+        #copyright {
+            font-size: 1.5em;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        #footerNav {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: 40em) {
+    body {
+        header {
+            #logoCon {
+                img {
+                    max-width: 250px;
+                }
+            }
+
+            #logo {
+                max-width: 174px;
+                padding-top: 10px;
+            }
+
+            #mainNav {
+                padding-top: 10px;
+                margin: 0px;
+                margin-top: 10px;
+
+                ul {
+                    text-align: right;
+                    padding-right: 10px;
+                }
+
+                ul li a {
+                    font-size: 1.25em;
+                }
+            }
+        }
+
+        #bannerCon {
+            margin-top: 100px;
+
+            #welcome h3 {
+                margin-top: 100px;
+                padding-left: 25%;
+                padding-right: 25%;
+                font-size: 4em;
+            }
+        }
+
+        #scrollArrow {
+            margin-top: 50px;
+            width: 100%;
+            animation-name: pulse;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            display: block;
+            text-align: center;
+
+            img {
+                width: 100px;
+                margin-left: 0 auto;
+                margin-right: 0 auto;
+            }
+        }
+
+        #aboutCon {
+            #aboutImg {
+                img {
+                    max-width: 400px;
+                }
+            }
+            #aboutInfo {
+                margin-top: 20px;
+                padding-left: 10%;
+                padding-right: 10%;
+
+                p {
+                    font-size: 1.25em;
+                }
+            }
+        }
+
+        .button {
+            padding: 20px 30px 20px 30px;
+
+            a {
+                font-size: 3em;
+            }
+        }
+
+        #workCon h2 {
+            margin-bottom: 10px;
+        }
+
+        .workBox {
+            width: 45%;
+            height: 400px;
+            padding: 10px;
+            margin-top: 0px;
+            margin-left: 5%;
+        }
+
+        .hoverText {
+            font-size: 2em;
+        }
+
+        #contactCon {
+            h2 {
+                margin-bottom: 30px;
+            }
+
+            #linksCon {
+                padding-left: 25px;
+
+                h3 {
+                    margin-left: 0px;
+                    margin-bottom: 40px;
+                    text-align: left;
+                }
+
+                ul {
+                    text-align: left;
+                }
+
+                li {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        footer {
+            color: $theme-light;
+
+            #backTop {
+                display: none;
+            }
+
+            #copyright {
+                padding-top: 2px;
+                p {
+                    margin: 0;
+                    font-size: .65em;
+                }
+            }
+
+            #footerNav {
+                display: inline;
+                text-align: right;
+
+                ul {
+                    padding-top: 8px;
+
+                    li {
+                        display: inline;
+                        margin-left: 40px;
+
+                        a {
+                            color: $theme-light;
+                            font-size: .875em;
+                        }
+
+                        a:hover {
+                            color: $brand-color;
+                            transition: all .8s ease;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 50em) {
+    body {
+        #mainNav ul {
+            padding-right: 20px;
+        }
+
+        .button {
+            a {
+                font-size: 4em;
+            }
+        }
+
+        .workBox {
+            margin-top: 40px;
+            height: 400px;
+        }
+
+        #workBoxes {
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+
+        #contactCon {
+            #linksCon {
+                h3 {
+                    font-size: 2.5em;
+                }
+
+                li {
+                    margin-bottom: 30px;
+                }
+
+                img {
+                    width: 40px;
+                    margin-right: 8px;
+                }
+
+                a {
+                    font-size: 1.875em;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 64em) {
+    body {
+        #aboutCon {
+            #aboutImg {
+                width: 50%;
+            }
+
+            #aboutInfo {
+                margin-top: 30px;
+                width: 50%;
+                padding: 0 5% 0 0;
+
+                p {
+                    font-size: 1.5em;
+                }
+            }
+        }
+
+        .button {
+            margin-top: 40px;
+        }
+
+        .hoverText {
+            font-size: 2.5em;
+        }
+    }
+}
+
+
+
+
+//Western Work
+
+
+body {
+
+    #bannerCon {
+        margin-top: 0px;
+        margin-bottom: 30px;
+
+        #welcome{
+            padding: 0;
+        }
+    }
+
+    #aboutCon {
+
+    }
+}
